@@ -32,15 +32,8 @@ lmm_power <- pwr.f2.test(u = u_lmm, f2 = f2_lmm, sig.level = alpha, power = powe
 n_lmm_total <- ceiling(lmm_power$u + lmm_power$v + 1)
 cat("LMM/Cox Total N:", n_lmm_total, "\n\n")
 
-### 3. Mendelian Randomisation (R² = 0.04)
-r2_mr <- 0.04
-f2_mr <- r2_mr / (1 - r2_mr)
 
-mr_power <- pwr.f2.test(u = 1, f2 = f2_mr, sig.level = alpha, power = power)
-n_mr_total <- ceiling(mr_power$u + mr_power$v + 1)
-cat("Mendelian Randomisation Total N:", n_mr_total, "\n\n")
-
-### 4. Propensity-Weighted Longitudinal Model (HR ~ 0.7 ~ Cohen's d = 0.4)
+### 3. Propensity-Weighted Longitudinal Model (HR ~ 0.7 ~ Cohen's d = 0.4)
 d_propensity <- 0.4
 prop_power <- pwr.t.test(d = d_propensity, power = power, sig.level = alpha, 
                          type = "two.sample", alternative = "two.sided")
