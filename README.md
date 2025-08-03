@@ -1,13 +1,17 @@
 # Power Calculations for Parkinson’s and Metabolic Trait Analyses
 
-This repository contains R code and a reproducible workflow to calculate power and required sample sizes for four core analyses in Parkinson’s disease (PD) and metabolic risk research.
+This repository contains R code and a reproducible workflow to calculate power and required sample sizes for three core analyses in Parkinson’s disease (PD) and metabolic risk research.
 
 ## Analyses Covered
 
-1. **GWAS (Case-Control Study)** – Estimate the total sample size needed to detect a genetic variant associated with PD.
-2. **Phenotypic Clustering and Progression Modeling** – Determine the sample size for detecting small effects of biomarker-defined subtypes on disease progression.
-3. **Mendelian Randomisation (MR)** – Estimate the sample size for detecting a causal effect of genetically predicted traits (e.g., insulin resistance) on PD.
-4. **Propensity-Weighted Longitudinal Analysis** – Calculate the sample size needed to detect treatment effects (e.g., GLP-1RAs, ARBs) on PD outcomes in real-world datasets.
+1. **GWAS (Case-Control Study)**  
+   Estimate the total sample size needed to detect a genetic variant associated with PD.
+
+2. **Phenotypic Clustering and Progression Modeling**  
+   Determine the sample size for detecting small effects of biomarker-defined subtypes on disease progression.
+
+3. **Propensity-Weighted Longitudinal Analysis**  
+   Calculate the sample size needed to detect treatment effects (e.g., GLP-1RAs, ARBs) on PD outcomes in real-world datasets.
 
 ## Parameter Descriptions
 
@@ -20,7 +24,6 @@ This repository contains R code and a reproducible workflow to calculate power a
 | `h`           | Cohen’s h, a standardized effect size used for comparing two proportions (e.g., allele frequency differences). |
 | `f2_lmm`      | Cohen’s f², a standardized effect size for multiple regression or linear mixed models. f² = R² / (1 − R²). |
 | `u_lmm`       | The number of predictor variables or degrees of freedom in the numerator (e.g., number of biomarker axes). |
-| `r2_mr`       | The proportion of variance in the exposure explained by the genetic instrument in Mendelian randomisation. |
 | `d`           | Cohen’s d, a standardized mean difference used for two-sample comparisons (e.g., treatment vs. control). |
 
 ## Usage
